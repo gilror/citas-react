@@ -1,27 +1,30 @@
 
-function Paciente() {
+function Paciente({paciente}) {
+  
+  const { nombre, propietario, email, alta, sintomas } = paciente;
+
   return (
-    <div className="m-3 bg-white shadow-md px-5 py-10 rounded-xl">
+    <div className="mx-5 my-5 bg-white shadow-md px-5 py-10 rounded-xl">
       <p className="font-bold mb-3 text-gray-700 uppercase">
         Nombre: {""}
-        <span className="font-normal normal-case">Paola</span>
+        <span className="font-normal normal-case">{ nombre }</span>
       </p>
       <p className="font-bold mb-3 text-gray-700 uppercase">
         Propietario: {""}
-        <span className="font-normal normal-case">Jessica</span>
+        <span className="font-normal normal-case">{ propietario }</span>
       </p>
       <p className="font-bold mb-3 text-gray-700 uppercase">
         Email: {""}
-        <span className="font-normal normal-case">mascotitafea@gmail.com</span>
+        <span className="font-normal normal-case">{ email }</span>
       </p>
       <p className="font-bold mb-3 text-gray-700 uppercase">
         Fecha Alta: {""}
-        <span className="font-normal normal-case">10 Diciembre 2022</span>
+        <span className="font-normal normal-case">{ alta }</span>
       </p>
       <p className="font-bold mb-3 text-gray-700 uppercase">
         Sintomas: {""}
         <span className="font-normal normal-case">
-          Tiene cara de perro y apesta a popo
+          { sintomas }
         </span>
       </p>
     </div>
